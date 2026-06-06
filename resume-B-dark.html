@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄伟群 - 简历 (方案B 深色商务风)</title>
+<style>
+@page{size:A4;margin:0}*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;background:#d0d5dd;color:#2d3748;line-height:1.65;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:297mm;margin:24px auto;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.15);display:flex;overflow:hidden}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none}.print-btn{display:none!important}}
+@media(max-width:800px){.page{width:100%;min-height:auto;margin:0;flex-direction:column}.sidebar{width:100%!important}.main{padding:24px 20px!important}}
+
+.sidebar{width:228px;background:#0f172a;color:#cbd5e1;padding:0;flex-shrink:0;display:flex;flex-direction:column}
+.side-top{padding:36px 22px 24px;text-align:center;background:linear-gradient(180deg,#1e293b,#0f172a)}
+.avatar-ring{width:80px;height:80px;border-radius:50%;border:3px solid #f59e0b;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f59e0b,#d97706);font-size:32px;font-weight:800;color:#0f172a}
+.side-name{font-size:22px;font-weight:800;color:#fff;letter-spacing:3px}
+.side-title{font-size:12px;color:#94a3b8;margin-top:4px;letter-spacing:1px}
+
+.side-sec{padding:16px 22px;border-top:1px solid rgba(255,255,255,.06)}
+.side-sec-title{font-size:10px;font-weight:700;color:#f59e0b;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.side-contact{font-size:12px;margin-bottom:6px;display:flex;align-items:center;gap:8px;color:#94a3b8}
+.side-contact .ico{font-size:13px;width:18px;text-align:center}
+
+.side-skill-group{margin-bottom:10px}
+.side-skill-label{font-size:11px;color:#e2e8f0;font-weight:600;margin-bottom:4px}
+.side-skill-tags{display:flex;flex-wrap:wrap;gap:3px}
+.side-skill-tag{font-size:10px;padding:2px 7px;border-radius:3px;background:rgba(255,255,255,.06);color:#94a3b8;border:1px solid rgba(255,255,255,.04)}
+.side-skill-tag.hl{background:rgba(245,158,11,.15);color:#fbbf24;border-color:rgba(245,158,11,.2)}
+
+.side-cert{font-size:11.5px;color:#94a3b8;margin-bottom:5px;padding-left:12px;position:relative}
+.side-cert::before{content:"◆";position:absolute;left:0;font-size:6px;color:#f59e0b;top:4px}
+
+/* 右侧 */
+.main{flex:1;padding:36px 32px 24px}
+
+.m-sec{margin-bottom:22px}
+.m-sec-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.m-sec-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0}
+.m-sec-name{font-size:16px;font-weight:800;color:#0f172a;letter-spacing:2px}
+.m-sec-line{flex:1;height:2px;background:linear-gradient(90deg,#e2e8f0,transparent);border-radius:1px}
+
+/* 概述 */
+.m-summary{font-size:13.5px;color:#475569;line-height:1.8;padding:12px 16px;background:#f8fafc;border-radius:8px;border-left:4px solid #f59e0b}
+
+/* 项目 */
+.m-proj{margin-bottom:18px;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden}
+.m-proj-head{background:#f1f5f9;padding:14px 18px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #e2e8f0}
+.m-proj-name{font-size:15px;font-weight:800;color:#0f172a}
+.m-proj-meta{font-size:11.5px;color:#64748b;margin-top:2px}
+.m-proj-badge{background:#0f172a;color:#f59e0b;font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.m-proj-desc{font-size:12.5px;color:#64748b;padding:10px 18px;line-height:1.7;border-bottom:1px solid #f1f5f9}
+
+.m-proj-body{padding:14px 18px}
+.m-ach{margin-bottom:14px;display:flex;gap:10px;align-items:flex-start}
+.m-ach:last-child{margin-bottom:0}
+.m-ach-dot{width:10px;height:10px;border-radius:50%;background:#f59e0b;flex-shrink:0;margin-top:5px}
+.m-ach-content{flex:1}
+.m-ach-title{font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px}
+.m-ach-desc{font-size:12.5px;color:#475569;line-height:1.75}
+.m-ach-result{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:700;color:#92400e;background:#fef3c7;padding:2px 10px;border-radius:4px}
+
+.m-proj-stack{padding:0 18px 12px;display:flex;flex-wrap:wrap;gap:4px}
+.m-proj-stack span{font-size:10px;padding:2px 8px;border-radius:3px;background:#edf2f7;color:#475569}
+
+/* 教育 */
+.m-edu-row{display:flex;gap:16px}
+.m-edu-card{flex:1;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px}
+.m-edu-card h4{font-size:13px;font-weight:700;color:#0f172a;margin-bottom:4px}
+.m-edu-card p{font-size:12px;color:#475569;line-height:1.7}
+.m-edu-card .gold{color:#d97706;font-weight:600}
+
+.print-btn{position:fixed;bottom:28px;right:28px;background:linear-gradient(135deg,#0f172a,#1e293b);color:#f59e0b;border:2px solid #f59e0b;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 6px 24px rgba(15,23,42,.3);transition:all .25s;z-index:100;display:flex;align-items:center;gap:8px}
+.print-btn:hover{background:#f59e0b;color:#0f172a;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">🖨 打印 / 导出 PDF</button>
+<div class="page">
+
+<div class="sidebar">
+  <div class="side-top">
+    <div class="avatar-ring">黄</div>
+    <div class="side-name">黄伟群</div>
+    <div class="side-title">Java 研发工程师 · 3年</div>
+  </div>
+
+  <div class="side-sec">
+    <div class="side-sec-title">联系方式</div>
+    <div class="side-contact"><span class="ico">📱</span>15280583206</div>
+    <div class="side-contact"><span class="ico">✉</span>2990971156@qq.com</div>
+    <div class="side-contact"><span class="ico">🌐</span>interview.fashioncool.top</div>
+    <div class="side-contact"><span class="ico">📍</span>2000.12 · 男 · 185cm</div>
+  </div>
+
+  <div class="side-sec">
+    <div class="side-sec-title">技术栈</div>
+    <div class="side-skill-group">
+      <div class="side-skill-label">核心</div>
+      <div class="side-skill-tags">
+        <span class="side-skill-tag hl">Java</span>
+        <span class="side-skill-tag hl">Spring Cloud</span>
+        <span class="side-skill-tag hl">MySQL</span>
+        <span class="side-skill-tag hl">Redis</span>
+        <span class="side-skill-tag hl">RocketMQ</span>
+      </div>
+    </div>
+    <div class="side-skill-group">
+      <div class="side-skill-label">工具 & 平台</div>
+      <div class="side-skill-tags">
+        <span class="side-skill-tag">Docker</span>
+        <span class="side-skill-tag">Kubernetes</span>
+        <span class="side-skill-tag">Git</span>
+        <span class="side-skill-tag">Elasticsearch</span>
+        <span class="side-skill-tag">ShardingSphere</span>
+      </div>
+    </div>
+    <div class="side-skill-group">
+      <div class="side-skill-label">核心能力</div>
+      <div class="side-skill-tags">
+        <span class="side-skill-tag">分库分表</span>
+        <span class="side-skill-tag">SQL 调优</span>
+        <span class="side-skill-tag">多线程并发</span>
+        <span class="side-skill-tag">设计模式</span>
+        <span class="side-skill-tag">微服务治理</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-sec">
+    <div class="side-sec-title">证书</div>
+    <div class="side-cert">大学英语六级（CET-6）</div>
+    <div class="side-cert">软考 · 数据库系统工程师</div>
+  </div>
+
+  <div class="side-sec">
+    <div class="side-sec-title">教育</div>
+    <div style="font-size:12px">
+      <div style="color:#fff;font-weight:700;font-size:13px">云南大学（211）</div>
+      <div style="color:#94a3b8">软件工程 · 学士</div>
+      <div style="color:#64748b;font-size:11px;margin-top:2px">2019 - 2023</div>
+      <div style="color:#64748b;font-size:11px;margin-top:2px">专业课 GPA 3.5/4.0</div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="m-sec">
+    <div class="m-sec-head">
+      <div class="m-sec-icon">👤</div>
+      <div class="m-sec-name">个人概述</div>
+      <div class="m-sec-line"></div>
+    </div>
+    <div class="m-summary">3 年后端研发经验，先后参与两个核心业务系统的设计与开发，服务全国 150+ 政企和医疗机构。擅长高并发场景下的系统性能优化，有消息队列削峰、多线程并发处理、海量数据分库分表等实战经验。能够独立负责核心模块的架构设计与上线。</div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-sec-head">
+      <div class="m-sec-icon">🚀</div>
+      <div class="m-sec-name">项目经验</div>
+      <div class="m-sec-line"></div>
+    </div>
+
+    <div class="m-proj">
+      <div class="m-proj-head">
+        <div><div class="m-proj-name">财税收开一体数字化平台</div><div class="m-proj-meta">2023.07 - 2024.10 · 日均开票 2-3 万张 · 100+ 机构</div></div>
+        <div class="m-proj-badge">核心开发</div>
+      </div>
+      <div class="m-proj-desc">覆盖财政票据、数电发票、收单管理全流程的数字化平台，公司核心商业化产品。</div>
+      <div class="m-proj-body">
+        <div class="m-ach"><div class="m-ach-dot"></div><div class="m-ach-content"><div class="m-ach-title">邮箱采集系统改造</div><div class="m-ach-desc">原有采集方式高峰期频繁超时丢数据。重新设计架构：消息队列解耦上下游 + 多实例并行消费 + 自建邮箱接收系统 + 多线程异步处理替代同步阻塞。</div><div class="m-ach-result">延迟从 2-3 分钟 → 3-5 秒，吞吐提升 50-80%</div></div></div>
+        <div class="m-ach"><div class="m-ach-dot"></div><div class="m-ach-content"><div class="m-ach-title">发票校验规则引擎</div><div class="m-ach-desc">设计支持用户自定义的校验规则模块，自由组合验真、验重、抬头校验等规则，运行时按规则链执行，新增场景无需改代码。</div><div class="m-ach-result">成为项目核心卖点，零代码上线新场景</div></div></div>
+      </div>
+      <div class="m-proj-stack"><span>Spring Cloud</span><span>RocketMQ</span><span>Redis</span><span>MySQL</span><span>Docker+K8s</span></div>
+    </div>
+
+    <div class="m-proj">
+      <div class="m-proj-head">
+        <div><div class="m-proj-name">采购协同服务平台</div><div class="m-proj-meta">2024.10 - 至今 · 日均票单 1-1.5 万份 · 50+ 医院</div></div>
+        <div class="m-proj-badge">主要负责人</div>
+      </div>
+      <div class="m-proj-desc">聚焦公立医院采购数字化，覆盖票单入库 → 智能稽核 → 入账归档全链路。</div>
+      <div class="m-proj-body">
+        <div class="m-ach"><div class="m-ach-dot"></div><div class="m-ach-content"><div class="m-ach-title">AI 智能稽核</div><div class="m-ach-desc">AI 识别票面信息 + 异步流水线（识别→存储→稽并行）+ 线程池精确控制并发度，批量处理能力大幅提升。</div><div class="m-ach-result">500 份从 25-30 分钟 → 8-10 分钟，效率提升 200%</div></div></div>
+        <div class="m-ach"><div class="m-ach-dot"></div><div class="m-ach-content"><div class="m-ach-title">海量数据分库分表</div><div class="m-ach-desc">票单明细两年累计 7000-8000 万条，按医院 ID 分片，跨分片走搜索引擎。</div><div class="m-ach-result">核心接口 P99 从 800ms → 400ms</div></div></div>
+        <div class="m-ach"><div class="m-ach-dot"></div><div class="m-ach-content"><div class="m-ach-title">规则引擎重构 + 状态机</div><div class="m-ach-desc">拆分稽核规则为可扩展架构，工厂统一管理，状态机管控单据流转。</div><div class="m-ach-result">新增 5 种规则零 Bug</div></div></div>
+      </div>
+      <div class="m-proj-stack"><span>Spring Cloud</span><span>ShardingSphere</span><span>Elasticsearch</span><span>StateMachine</span><span>Docker+K8s</span></div>
+    </div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-sec-head">
+      <div class="m-sec-icon">🎓</div>
+      <div class="m-sec-name">教育 & 证书</div>
+      <div class="m-sec-line"></div>
+    </div>
+    <div class="m-edu-row">
+      <div class="m-edu-card"><h4>云南大学（211 国家示范性软件学院）</h4><p>软件工程 · 学士 · 2019 - 2023<br>专业课 <span class="gold">GPA 3.5/4.0</span></p></div>
+      <div class="m-edu-card"><h4>证书 & 其他</h4><p><span class="gold">CET-6</span> · 可流畅阅读英文技术文档<br><span class="gold">软考</span> · 数据库系统工程师（中级）<br>个人网站 interview.fashioncool.top</p></div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

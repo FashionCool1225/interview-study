@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄伟群 - 简历 (方案A 极简学术风)</title>
+<style>
+@page{size:A4;margin:0}*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",serif;background:#e2e8f0;color:#1a1a1a;line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:297mm;margin:24px auto;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.08);padding:52px 56px 36px;position:relative}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none}.print-btn{display:none!important}}
+@media(max-width:800px){.page{width:100%;min-height:auto;margin:0;padding:28px 20px}}
+
+/* 打印按钮 */
+.print-btn{position:fixed;bottom:28px;right:28px;background:#1a1a1a;color:#fff;border:none;padding:14px 28px;border-radius:8px;font-size:14px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:all .2s;z-index:100}
+.print-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.3)}
+
+/* 名字 */
+.name-area{margin-bottom:8px;padding-bottom:20px;border-bottom:2px solid #1a1a1a}
+.name-area h1{font-size:36px;font-weight:800;letter-spacing:6px;color:#1a1a1a;margin-bottom:2px}
+.name-area .sub{font-size:14px;color:#555;letter-spacing:2px;font-weight:400}
+.contact-line{display:flex;gap:24px;margin-top:10px;font-size:12.5px;color:#666;flex-wrap:wrap}
+.contact-line span{display:flex;align-items:center;gap:4px}
+.contact-line .sep{color:#ccc}
+
+/* 分区 */
+.sec{margin-top:26px}
+.sec-h{font-size:13px;font-weight:700;letter-spacing:4px;color:#1a1a1a;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid #ddd;margin-bottom:14px}
+
+/* 概述 */
+.summary{font-size:13.5px;color:#444;line-height:1.85;text-align:justify}
+
+/* 项目 */
+.proj{margin-bottom:20px}
+.proj-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.proj-name{font-size:15px;font-weight:700;color:#1a1a1a}
+.proj-date{font-size:12px;color:#888;font-style:italic}
+.proj-role-line{font-size:12px;color:#666;margin-bottom:8px}
+.proj-intro{font-size:12.5px;color:#666;margin-bottom:10px;line-height:1.7}
+.proj-item{margin-bottom:12px;padding-left:16px;position:relative}
+.proj-item::before{content:"—";position:absolute;left:0;color:#999;font-weight:700}
+.proj-item-title{font-size:13px;font-weight:700;color:#1a1a1a}
+.proj-item-desc{font-size:12.5px;color:#555;line-height:1.75;margin-top:2px}
+.proj-item-result{font-size:12px;color:#2d6a4f;font-weight:600;margin-top:3px}
+.proj-stack{font-size:11px;color:#999;margin-top:6px;letter-spacing:.5px}
+
+/* 技能 */
+.skill-row{display:flex;gap:8px;margin-bottom:8px;align-items:baseline}
+.skill-label{font-size:12px;font-weight:700;color:#1a1a1a;min-width:90px;flex-shrink:0}
+.skill-value{font-size:12.5px;color:#555}
+
+/* 底部 */
+.bottom-row{display:flex;gap:40px;margin-top:4px}
+.bottom-col{flex:1}
+.bottom-col h4{font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+.bottom-col p{font-size:12.5px;color:#555;line-height:1.7}
+.bottom-col li{font-size:12.5px;color:#555;margin-bottom:3px;list-style:none;padding-left:12px;position:relative}
+.bottom-col li::before{content:"·";position:absolute;left:0;color:#999}
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">打印 / 导出 PDF</button>
+<div class="page">
+
+<div class="name-area">
+  <h1>黄伟群</h1>
+  <div class="sub">Java 研发工程师 · 3 年经验</div>
+  <div class="contact-line">
+    <span>15280583206</span><span class="sep">|</span>
+    <span>2990971156@qq.com</span><span class="sep">|</span>
+    <span>2000.12 生</span><span class="sep">|</span>
+    <span>云南大学（211）软件工程学士</span>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-h">个人概述</div>
+  <div class="summary">3 年后端研发经验，先后参与两个核心业务系统的设计与开发，服务全国 150+ 政企和医疗机构。擅长高并发场景下的系统性能优化，有消息队列削峰、多线程并发处理、海量数据分库分表等实战经验。具备从需求分析到系统上线的全流程交付能力，能够独立负责核心模块的架构设计与落地。</div>
+</div>
+
+<div class="sec">
+  <div class="sec-h">项目经验</div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <div class="proj-name">财税收开一体数字化平台</div>
+      <div class="proj-date">2023.07 — 2024.10</div>
+    </div>
+    <div class="proj-role-line">核心开发 · 博思软件核心商业化产品 · 日均开票 2-3 万张 · 服务 100+ 机构</div>
+    <div class="proj-intro">覆盖财政票据、数电发票、收单管理全流程的数字化平台。</div>
+    <div class="proj-item">
+      <div class="proj-item-title">邮箱采集系统改造</div>
+      <div class="proj-item-desc">原有采集方式在高峰期频繁超时和数据丢失。重新设计采集架构，通过消息队列解耦上下游处理速率，消费端多实例并行；同时自建邮箱接收系统，用多线程异步处理替代同步阻塞。</div>
+      <div class="proj-item-result">→ 延迟从 2-3 分钟降到 3-5 秒，高峰期零超时，吞吐提升约 50-80%</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-item-title">发票校验规则引擎</div>
+      <div class="proj-item-desc">设计支持用户自定义的校验规则模块，用户可在界面自由组合验真、验重、抬头校验等规则，运行时按规则链依次执行，新增场景无需改代码。</div>
+      <div class="proj-item-result">→ 模块成为项目核心卖点，运营可自主配置，零代码上线新场景</div>
+    </div>
+    <div class="proj-stack">Spring Cloud · RocketMQ · Redis · MySQL · Docker + K8s</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <div class="proj-name">采购协同服务平台</div>
+      <div class="proj-date">2024.10 — 至今</div>
+    </div>
+    <div class="proj-role-line">主要负责人 · 聚焦公立医院采购数字化 · 日均票单 1-1.5 万份 · 服务 50+ 医院</div>
+    <div class="proj-intro">覆盖药品、耗材、物资从票单入库到智能稽核再到入账归档的全链路平台。</div>
+    <div class="proj-item">
+      <div class="proj-item-title">AI 智能稽核</div>
+      <div class="proj-item-desc">引入 AI 识别票面信息，设计异步流水线处理架构：识别、存储、稽核三步并行，通过线程池精确控制并发度。批量处理能力大幅提升。</div>
+      <div class="proj-item-result">→ 500 份票单处理从 25-30 分钟缩短到 8-10 分钟，效率提升约 200%</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-item-title">海量数据分库分表</div>
+      <div class="proj-item-desc">票单明细表两年累计约 7000-8000 万条，按高频查询维度（医院 ID）做数据分片，跨分片统计走搜索引擎。</div>
+      <div class="proj-item-result">→ 核心接口响应时间从约 800ms 降到约 400ms</div>
+    </div>
+    <div class="proj-item">
+      <div class="proj-item-title">规则引擎重构</div>
+      <div class="proj-item-desc">将堆在一起的稽核规则拆分为可扩展架构：每种规则独立实现，工厂统一管理，流程骨架统一抽象。配合状态机管理单据状态流转。</div>
+      <div class="proj-item-result">→ 新增 5 种规则零 Bug，维护成本大幅降低</div>
+    </div>
+    <div class="proj-stack">Spring Cloud · ShardingSphere · Elasticsearch · Spring StateMachine · Docker + K8s</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-h">专业技能</div>
+  <div class="skill-row"><span class="skill-label">后端开发</span><span class="skill-value">Java，多线程与异步编程，设计模式，规范代码与架构设计</span></div>
+  <div class="skill-row"><span class="skill-label">微服务</span><span class="skill-value">Spring Cloud Alibaba，服务拆分与治理，接口开发，线上排查</span></div>
+  <div class="skill-row"><span class="skill-label">数据库中间件</span><span class="skill-value">MySQL 设计与调优，分库分表实践，Redis 缓存，消息中间件</span></div>
+  <div class="skill-row"><span class="skill-label">工程化部署</span><span class="skill-value">Docker + K8s 部署运维，Git 版本管理，全流程研发文档输出</span></div>
+</div>
+
+<div class="sec">
+  <div class="sec-h">教育 & 证书</div>
+  <div class="bottom-row">
+    <div class="bottom-col">
+      <h4>云南大学（211 国家示范性软件学院）</h4>
+      <p>软件工程 · 学士 · 2019.09 - 2023.06<br>专业课 GPA 3.5/4.0</p>
+    </div>
+    <div class="bottom-col">
+      <ul>
+        <li>大学英语六级（CET-6），可流畅阅读英文技术文档</li>
+        <li>全国软考 · 数据库系统工程师（中级职称资格）</li>
+        <li>个人网站 interview.fashioncool.top</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

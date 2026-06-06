@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄伟群 - Java 研发工程师</title>
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #e8ecf1;
+  color: #2d3748;
+  line-height: 1.6;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 24px auto;
+  background: #fff;
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  position: relative;
+  overflow: hidden;
+}
+
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; }
+  .print-btn { display: none !important; }
+}
+
+@media screen and (max-width: 800px) {
+  .page { width: 100%; min-height: auto; margin: 0; }
+}
+
+/* ===== 顶部横幅 ===== */
+.header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%);
+  color: #fff;
+  padding: 36px 44px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  top: -60px; right: -40px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.04);
+}
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: 80px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.03);
+}
+
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+.name-block h1 { font-size: 32px; font-weight: 800; letter-spacing: 4px; margin-bottom: 4px; }
+.name-block .subtitle { font-size: 15px; color: rgba(255,255,255,.7); font-weight: 400; letter-spacing: 1px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 28px;
+  font-size: 13px;
+  color: rgba(255,255,255,.85);
+  text-align: right;
+}
+.contact-grid .item { display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
+.contact-grid .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  flex-shrink: 0;
+}
+
+/* ===== 主内容 ===== */
+.body { padding: 28px 44px 20px; }
+
+/* 分区标题 */
+.sec-title {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px; margin-top: 24px;
+}
+.sec-title:first-child { margin-top: 0; }
+.sec-title .bar {
+  width: 4px; height: 20px; border-radius: 2px;
+  background: linear-gradient(180deg, #2d5a87, #1e3a5f);
+}
+.sec-title h2 {
+  font-size: 16px; font-weight: 700; color: #1e3a5f;
+  letter-spacing: 2px;
+}
+.sec-title .line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, #d1dce8, transparent);
+}
+
+/* 工作概述 */
+.summary-text {
+  font-size: 13.5px; color: #4a5568; line-height: 1.8;
+  padding: 14px 18px;
+  background: #f7f9fc;
+  border-left: 3px solid #2d5a87;
+  border-radius: 0 8px 8px 0;
+}
+
+/* 项目卡片 */
+.proj {
+  margin-bottom: 20px;
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.proj-head {
+  background: linear-gradient(135deg, #f7f9fc, #edf2f7);
+  padding: 14px 20px;
+  border-bottom: 1px solid #e8edf3;
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.proj-name { font-size: 15px; font-weight: 700; color: #1a202c; }
+.proj-meta { font-size: 12px; color: #718096; margin-top: 3px; }
+.proj-role {
+  background: #1e3a5f; color: #fff;
+  font-size: 11px; padding: 3px 12px;
+  border-radius: 12px; font-weight: 600;
+  white-space: nowrap; flex-shrink: 0;
+}
+.proj-intro {
+  font-size: 13px; color: #4a5568;
+  padding: 12px 20px;
+  line-height: 1.7;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.proj-body { padding: 14px 20px 18px; }
+
+.item {
+  margin-bottom: 16px;
+  padding-left: 18px;
+  position: relative;
+}
+.item:last-child { margin-bottom: 0; }
+.item::before {
+  content: '';
+  position: absolute; left: 0; top: 8px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2d5a87;
+}
+.item-title {
+  font-size: 13.5px; font-weight: 700; color: #1a202c;
+  margin-bottom: 4px;
+}
+.item-desc {
+  font-size: 12.5px; color: #4a5568; line-height: 1.75;
+}
+.item-result {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 5px;
+  background: #eef7ed;
+  border: 1px solid #c6e5c1;
+  color: #276749;
+  font-size: 12px; font-weight: 600;
+  padding: 3px 10px; border-radius: 4px;
+}
+.item-result .arrow { font-size: 10px; }
+
+/* 技术栈标签 */
+.stack-row { padding: 0 20px 14px; display: flex; flex-wrap: wrap; gap: 5px; }
+.stack-tag {
+  background: #edf2f7;
+  color: #4a5568;
+  font-size: 11px; padding: 2px 9px;
+  border-radius: 3px; font-weight: 500;
+}
+
+/* 技能区域 */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.skill-box {
+  background: #f7f9fc;
+  border: 1px solid #e8edf3;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.skill-box-title {
+  font-size: 12px; font-weight: 700; color: #1e3a5f;
+  margin-bottom: 6px; letter-spacing: 1px;
+}
+.skill-box-content {
+  font-size: 12.5px; color: #4a5568; line-height: 1.7;
+}
+
+/* 教育 & 证书 */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.bottom-card {
+  background: #f7f9fc;
+  border: 1px solid #e8edf3;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+.bottom-card h3 {
+  font-size: 13px; font-weight: 700; color: #1e3a5f;
+  margin-bottom: 8px;
+}
+.bottom-card p {
+  font-size: 12.5px; color: #4a5568; line-height: 1.7;
+}
+.bottom-card .highlight {
+  color: #1e3a5f; font-weight: 600;
+}
+.cert-list { list-style: none; }
+.cert-list li {
+  font-size: 12.5px; color: #4a5568;
+  padding: 3px 0;
+  display: flex; align-items: center; gap: 6px;
+}
+.cert-list li::before {
+  content: '●';
+  color: #2d5a87;
+  font-size: 8px;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  font-size: 10px; color: #a0aec0;
+  padding: 16px 44px 20px;
+}
+
+/* 打印按钮 */
+.print-btn {
+  position: fixed; bottom: 28px; right: 28px;
+  background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+  color: #fff; border: none;
+  padding: 14px 28px;
+  border-radius: 12px; font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(30,58,95,.35);
+  transition: all .25s;
+  z-index: 100;
+  display: flex; align-items: center; gap: 8px;
+}
+.print-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(30,58,95,.45); }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+  打印 / 导出 PDF
+</button>
+
+<div class="page">
+
+  <!-- 顶部 -->
+  <div class="header">
+    <div class="header-top">
+      <div class="name-block">
+        <h1>黄伟群</h1>
+        <div class="subtitle">Java 研发工程师 · 3 年经验 · 寻求后端开发岗位</div>
+      </div>
+      <div class="contact-grid">
+        <div class="item"><span class="dot"></span>15280583206</div>
+        <div class="item"><span class="dot"></span>2990971156@qq.com</div>
+        <div class="item"><span class="dot"></span>2000.12 · 男</div>
+        <div class="item"><span class="dot"></span>interview.fashioncool.top</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体 -->
+  <div class="body">
+
+    <!-- 个人概述 -->
+    <div class="sec-title">
+      <div class="bar"></div>
+      <h2>个人概述</h2>
+      <div class="line"></div>
+    </div>
+    <div class="summary-text">
+      3 年后端研发经验，先后参与两个核心业务系统的设计与开发，服务全国 150+ 政企和医疗机构。擅长复杂业务场景下的模块架构设计与性能优化，有多线程并发处理、设计模式重构、AI 能力集成等实战经验。采用 DDD 分层架构组织代码，具备从需求分析到系统上线的全流程交付能力。
+    </div>
+
+    <!-- 项目经验 -->
+    <div class="sec-title">
+      <div class="bar"></div>
+      <h2>项目经验</h2>
+      <div class="line"></div>
+    </div>
+
+    <!-- 项目一 -->
+    <div class="proj">
+      <div class="proj-head">
+        <div>
+          <div class="proj-name">财税收开一体数字化平台</div>
+          <div class="proj-meta">2023.07 - 2024.10 · 博思软件核心商业化产品</div>
+        </div>
+        <div class="proj-role">核心开发</div>
+      </div>
+      <div class="proj-intro">
+        覆盖财政票据、数电发票、收单管理全流程的数字化平台，日均开票 2-3 万张（月末高峰 5 万+），服务全国百余家行政事业单位。
+      </div>
+      <div class="proj-body">
+        <div class="item">
+          <div class="item-title">邮箱采集系统改造 — 解决高峰期超时和数据积压</div>
+          <div class="item-desc">
+            原有采集方式在业务高峰期频繁超时、甚至丢失数据。重新设计了采集架构：通过消息队列解耦上下游处理速率，消费端多实例并行消费；同时自建邮箱接收系统，用多线程和异步处理替代同步阻塞模式，配合负载均衡应对高峰流量。
+          </div>
+          <div class="item-result"><span class="arrow">▲</span> 采集延迟从 2-3 分钟降到 3-5 秒，高峰期零超时，吞吐提升约 50-80%</div>
+        </div>
+        <div class="item">
+          <div class="item-title">发票校验规则引擎 — 支持用户自定义校验规则</div>
+          <div class="item-desc">
+            设计了灵活的校验规则模块，用户可在界面上自由组合验真、验重、抬头校验、票面比对等规则，系统按配置的规则链依次执行。新增校验场景无需修改代码，运营人员可自主配置上线。
+          </div>
+          <div class="item-result"><span class="arrow">▲</span> 模块成为项目核心卖点，零代码上线新校验场景</div>
+        </div>
+      </div>
+      <div class="stack-row">
+        <span class="stack-tag">Spring Cloud</span>
+        <span class="stack-tag">RocketMQ</span>
+        <span class="stack-tag">Redis</span>
+        <span class="stack-tag">MySQL</span>
+        <span class="stack-tag">Docker + K8s</span>
+      </div>
+    </div>
+
+    <!-- 项目二 -->
+    <div class="proj">
+      <div class="proj-head">
+        <div>
+          <div class="proj-name">采购协同服务平台（票单稽核模块）</div>
+          <div class="proj-meta">2024.10 - 至今 · 聚焦公立医院采购数字化</div>
+        </div>
+        <div class="proj-role">主要负责人</div>
+      </div>
+      <div class="proj-intro">
+        覆盖药品、耗材、物资从采购计划、入库、配送到票单稽核的全链路平台，采用 DDD 分层架构（adapter / application / core / repository / model），服务全国 50+ 医疗机构。
+      </div>
+      <div class="proj-body">
+        <div class="item">
+          <div class="item-title">稽核规则引擎 — 策略模式 + 工厂模式重构</div>
+          <div class="item-desc">
+            定义 RuleMatchStrategy 接口，实现 8 种匹配策略（精确匹配、范围比较、包含匹配、基于 Sorensen-Dice 算法的相似度匹配等），通过 RuleMatchStrategyFactory 统一创建和管理。支持不同医院/地区的差异化采购策略（CYET、HNRMYP、HNZFY 等），新增规则只需添加策略类 + 工厂注册，完全符合开闭原则。
+          </div>
+          <div class="item-result"><span class="arrow">▲</span> 规则扩展零改动主逻辑，维护成本大幅降低</div>
+        </div>
+        <div class="item">
+          <div class="item-title">AI 文档识别与异步处理 — MoonshotAI + Spring Retry</div>
+          <div class="item-desc">
+            集成 MoonshotAI 实现票据/凭单自动分类与票面文字提取，配置自定义线程池（core=8, max=16, queue=1000, CallerRunsPolicy）控制并发度。AI 接口调用采用 Spring Retry（@Retryable + @Backoff 指数退避）保障稳定性，结合 AOP 切面实现票单稽核的幂等重试机制。
+          </div>
+          <div class="item-result"><span class="arrow">▲</span> 批量处理效率显著提升，AI 调用失败自动降级重试</div>
+        </div>
+        <div class="item">
+          <div class="item-title">处方配药状态机 — Spring StateMachine 事件驱动</div>
+          <div class="item-desc">
+            基于 Spring StateMachine 管理处方单配药的完整生命周期：待配药 → 拆零配药 → 配药完成。通过 Guard 校验当前状态合法性，Action 统一处理状态变更（更新状态码 + 记录状态变更日志），杜绝非法状态跳转。提供自转换（REFRESH）支持状态同步刷新。
+          </div>
+          <div class="item-result"><span class="arrow">▲</span> 状态流转严格可控，状态变更全程可追溯</div>
+        </div>
+      </div>
+      <div class="stack-row">
+        <span class="stack-tag">Spring Boot</span>
+        <span class="stack-tag">Spring StateMachine</span>
+        <span class="stack-tag">Spring Retry</span>
+        <span class="stack-tag">MyBatis-Plus</span>
+        <span class="stack-tag">MoonshotAI</span>
+        <span class="stack-tag">MinIO</span>
+        <span class="stack-tag">Docker + K8s</span>
+      </div>
+    </div>
+
+    <!-- 专业技能 -->
+    <div class="sec-title">
+      <div class="bar"></div>
+      <h2>专业技能</h2>
+      <div class="line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <div class="skill-box-title">后端开发</div>
+        <div class="skill-box-content">熟练掌握 Java，熟悉多线程与异步编程、常用设计模式（策略/工厂/模板方法/AOP），具备 DDD 分层架构设计与模块落地能力</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">微服务架构</div>
+        <div class="skill-box-content">熟练使用 Spring Cloud Alibaba 技术栈，具备微服务拆分、服务治理、接口开发与线上问题排查能力</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">数据库 & 中间件</div>
+        <div class="skill-box-content">熟练使用 MySQL，有表结构设计、SQL 调优实践经验；熟悉 Redis 缓存与消息中间件；了解 MyBatis-Plus</div>
+      </div>
+      <div class="skill-box">
+        <div class="skill-box-title">工程化 & 部署</div>
+        <div class="skill-box-content">熟练使用 Docker + K8s 进行服务部署与运维，熟悉 Git 版本管理，能输出全流程研发文档</div>
+      </div>
+    </div>
+
+    <!-- 教育 & 证书 -->
+    <div class="sec-title">
+      <div class="bar"></div>
+      <h2>教育背景 & 证书</h2>
+      <div class="line"></div>
+    </div>
+    <div class="bottom-grid">
+      <div class="bottom-card">
+        <h3>云南大学（211 国家示范性软件学院）</h3>
+        <p>
+          <span class="highlight">软件工程 · 学士</span> · 2019.09 - 2023.06<br>
+          专业课 GPA 3.5/4.0 · 数据结构、计算机网络、操作系统、软件体系结构
+        </p>
+      </div>
+      <div class="bottom-card">
+        <h3>证书 & 其他</h3>
+        <ul class="cert-list">
+          <li>大学英语六级（CET-6），可流畅阅读英文技术文档</li>
+          <li>全国软考 · 数据库系统工程师（中级职称）</li>
+          <li>个人技术网站 interview.fashioncool.top</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    本简历由 HTML 生成 · 浏览器可直接打印为 PDF · 更新于 2026 年 6 月
+  </div>
+</div>
+
+</body>
+</html>
